@@ -68,7 +68,7 @@ class ProveedoresTable extends DataTableComponent{
             ->html(),
             Column::make('Acciones')
                 ->label(
-                    fn ($row, Column $column) => view('livewire.Proveedores.actions-table')->with([
+                    fn ($row, Column $column) => view('livewire.proveedores.actions-table')->with([
                         'model' => json_encode($row),
                     ])
                 )->html(),
