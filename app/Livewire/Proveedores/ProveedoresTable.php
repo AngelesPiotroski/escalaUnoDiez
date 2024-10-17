@@ -26,6 +26,10 @@ class ProveedoresTable extends DataTableComponent{
         $this->setRememberColumnSelectionEnabled();
         $this->setDataTableFingerprint(route('proveedores') . '-' . $this->dataTableFingerprint());
         $this->setEmptyMessage('No se encontraron Proveedores');
+        // Establecer valores aceptados para la paginación
+        $this->setPerPageAccepted([5, 10, 25, 50]); // Incluye 5 en la lista
+        // Establecer el número de resultados por página a 5
+        $this->setPerPage(5); // Aquí estableces el límite de resultados
     }
 
     public function query(): Builder

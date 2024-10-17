@@ -54,7 +54,7 @@ return [
 
         'stack' => [
             'driver' => 'stack',
-            'channels' => explode(',', env('LOG_STACK', 'single')),
+            'channels' => ['single', 'sentry'],
             'ignore_exceptions' => false,
         ],
 
@@ -72,6 +72,12 @@ return [
             'days' => env('LOG_DAILY_DAYS', 14),
             'replace_placeholders' => true,
         ],
+
+        'sentry' => [  // Agregar el canal Sentry aquí
+            'driver' => 'sentry',
+            'level' => 'error',
+        ],
+
         'errores' => [
             'driver' => 'daily',
             'path' => storage_path('logs/errores.log'),

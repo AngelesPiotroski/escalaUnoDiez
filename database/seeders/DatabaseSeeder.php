@@ -18,8 +18,15 @@ class DatabaseSeeder extends Seeder
         $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('Aa123456789'),
+            'password' => bcrypt('a123456789b'),
         ]);
-
+        // Llamar al seeder de Proveedores para ejecutar su seed
+        $this->call(ProveedoresSeeder::class);
+        $this->call(EstadoObraSeeder::class);
+        $this->call(FormaPagoSeeder::class);
+        $this->call(MaterialesSeeder::class);
+        $this->call(PaisesSeeder::class);
+        $this->call(ServiciosTableSeeder::class);
+        $this->call(UnidadSeeder::class);
     }
 }
