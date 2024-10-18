@@ -9,7 +9,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="stylesheet" rel="preload" href="{{ asset('assets/css/style.css') }}">
+    <link rel="preload" href="{{ asset('assets/css/style.css') }}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"></noscript>
+
     <!-- Fonts y pre-fetching -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
