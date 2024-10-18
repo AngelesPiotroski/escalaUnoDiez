@@ -15,16 +15,21 @@
             height: 100%;
             margin: 0;
             background-color: #e8e8e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
+            width: 100%;
         }
         img {
             max-width: 100%;
-            height: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -34,3 +39,4 @@
     </div>
 </body>
 </html>
+
